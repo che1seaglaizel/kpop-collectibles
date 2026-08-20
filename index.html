@@ -1,4 +1,6 @@
- <style>
+<!DOCTYPE html>
+<html lang="en">
+<style>
     body {
       background-image: url("leobg.jpg");
       background-size: cover;
@@ -22,59 +24,110 @@
       object-fit: cover;
       border-radius: 15px;
     }
-  </style>
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+</style>
 </head>
 
 <body>
-<h1>SEAHÉ⭑.ᐟ</h1>
-<p>Your haven for official K-pop albums and photocards!</p>
 
-<section>
-  <h2>⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</h2>
-  <p>SEAHÉ is a K-pop shop offering official albums and photocards from ENHYPEN, BTS, and CORTIS. We bring authentic K-pop merchandise closer to fellow fans and collectors.</p>
-  <img src="ganda.jpg" width="200" height=""200 alt="SEAH K-pop Shop">
-</section>
-</body>
-  <!-- K-POP FOLDERS -->
-  <section>
+  <!-- HEADER -->
+  <header>
+    <h1>SEAHÉ⭑.ᐟ</h1>
+    <p>Your haven for official K-pop albums and photocards!</p>
 
-    <h2>♡ Shop Collections ♡</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="folder-container">
+  <!-- MAIN CONTENT -->
+  <main>
 
-      <!-- ENHYPEN FOLDER -->
-      <div class="folder" onclick="showProducts('enhypen')">
-        <div class="folder-icon">📁</div>
-        <h2>ENHYPEN</h2>
-        <p>Albums & Photocards</p>
-      </div>
-       <div class="product">
+    <!-- SHOP INTRODUCTION -->
+    <section>
+      <h2>⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</h2>
+      <p>
+        SEAHÉ is a K-pop shop offering official albums and photocards
+        from ENHYPEN, BTS, and CORTIS. We bring authentic K-pop
+        merchandise closer to fellow fans and collectors.
+      </p>
+
+      <img src="ganda.jpg" alt="SEAH K-pop Shop">
+    </section>
+
+    <!-- K-POP COLLECTIONS -->
+    <section>
+      <h2>♡ Shop Collections ♡</h2>
+
+      <div class="folder-container">
+
+        <!-- ENHYPEN -->
+        <div class="folder" onclick="showProducts('enhypen')">
+          <div class="folder-icon">📁</div>
+          <h2>ENHYPEN</h2>
+          <p>Albums & Photocards</p>
+        </div>
+
+        <div class="product">
           <img src="enhypen.jpeg" alt="ENHYPEN Album">
           <h3>ENHYPEN Album</h3>
           <p class="price">₱1,200</p>
         </div>
-       <!-- BTS FOLDER -->
-      <div class="folder" onclick="showProducts('bts')">
-        <div class="folder-icon">📁</div>
-        <h2>BTS</h2>
-        <p>Albums & Photocards</p>
-      </div>
+
+        <!-- BTS -->
+        <div class="folder" onclick="showProducts('bts')">
+          <div class="folder-icon">📁</div>
+          <h2>BTS</h2>
+          <p>Albums & Photocards</p>
+        </div>
+
         <div class="product">
           <img src="bts.jpeg" alt="BTS Album">
           <h3>BTS Album</h3>
           <p class="price">₱1,200</p>
         </div>
 
-      <!-- CORTIS FOLDER -->
-      <div class="folder" onclick="showProducts('cortis')">
-        <div class="folder-icon">📁</div>
-        <h2>CORTIS</h2>
-        <p>Albums & Photocards</p>
-      </div>
-       <div class="product">
+        <!-- CORTIS -->
+        <div class="folder" onclick="showProducts('cortis')">
+          <div class="folder-icon">📁</div>
+          <h2>CORTIS</h2>
+          <p>Albums & Photocards</p>
+        </div>
+
+        <div class="product">
           <img src="cortis.jpeg" alt="CORTIS Album">
           <h3>CORTIS Album</h3>
           <p class="price">₱1,200</p>
         </div>
 
-    </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
