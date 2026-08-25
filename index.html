@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SEAHÉ⭑.ᐟ | K-Pop Shop</title>
+
+  <style>
     body {
       background-image: url("leobg.jpg");
       background-size: cover;
@@ -8,11 +15,46 @@
       background-attachment: fixed;
       font-family: Arial, sans-serif;
       text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    header h1 {
+      margin-bottom: 5px;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     section {
       background-color: rgba(255, 255, 255, 0.85);
-      padding: 20px;
+      padding: 25px;
       margin: 30px auto;
       width: 70%;
       border-radius: 15px;
@@ -25,31 +67,72 @@
       border-radius: 15px;
     }
 
-    nav ul {
-      list-style: none;
-      padding: 0;
+    .folder-container {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 25px;
     }
 
-    nav li {
-      display: inline;
-      margin: 0 15px;
+    .folder {
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 180px;
+      padding: 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
-    nav a {
-      text-decoration: none;
+    .folder:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .folder-icon {
+      font-size: 50px;
+    }
+
+    .folder h2 {
+      margin: 10px 0 5px;
+    }
+
+    .folder p {
+      margin-bottom: 15px;
+    }
+
+    .details-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: white;
       color: black;
+      text-decoration: none;
+      border: 1px solid black;
+      border-radius: 20px;
       font-weight: bold;
     }
-</style>
+
+    .details-btn:hover {
+      background-color: black;
+      color: white;
+    }
+
+    footer {
+      padding: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
   <header>
+
     <h1>SEAHÉ⭑.ᐟ</h1>
+
     <p>Your haven for official K-pop albums and photocards!</p>
 
+    <!-- NAVIGATION -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -57,75 +140,106 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
   </header>
+
 
   <!-- MAIN CONTENT -->
   <main>
 
     <!-- SHOP INTRODUCTION -->
     <section>
+
       <h2>⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</h2>
+
       <p>
         SEAHÉ is a K-pop shop offering official albums and photocards
         from ENHYPEN, BTS, and CORTIS. We bring authentic K-pop
         merchandise closer to fellow fans and collectors.
       </p>
 
-      <img src="ganda.jpg" alt="SEAH K-pop Shop">
+      <img src="ganda.jpg" alt="SEAHÉ K-pop Shop">
+
     </section>
+
 
     <!-- K-POP COLLECTIONS -->
     <section>
+
       <h2>♡ Shop Collections ♡</h2>
 
       <div class="folder-container">
 
+
         <!-- ENHYPEN -->
-        <div class="folder" onclick="showProducts('enhypen')">
+        <div class="folder">
+
           <div class="folder-icon">📁</div>
+
           <h2>ENHYPEN</h2>
+
           <p>Albums & Photocards</p>
+
+          <a
+            href="products/enhypen-album.html"
+            class="details-btn">
+            View Details ♡
+          </a>
+
         </div>
 
-        <div class="product">
-          <a href="products/enhypen-album.html">View Details ♡</a>
-        </div>
 
         <!-- BTS -->
-        <div class="folder" onclick="showProducts('bts')">
+        <div class="folder">
+
           <div class="folder-icon">📁</div>
+
           <h2>BTS</h2>
+
           <p>Albums & Photocards</p>
+
+          <a
+            href="products/bts-album.html"
+            class="details-btn">
+            View Details ♡
+          </a>
+
         </div>
 
-        <div class="product">
-          <img src="bts.jpeg" alt="BTS Album">
-          <h3>BTS Album</h3>
-          <p class="price">₱1,200</p>
-        </div>
 
         <!-- CORTIS -->
-        <div class="folder" onclick="showProducts('cortis')">
-          <div class="folder-icon">📁</div>
-          <h2>CORTIS</h2>
-          <p>Albums & Photocards</p>
-        </div>
+        <div class="folder">
 
-        <div class="product">
-          <img src="cortis.jpeg" alt="CORTIS Album">
-          <h3>CORTIS Album</h3>
-          <p class="price">₱1,200</p>
+          <div class="folder-icon">📁</div>
+
+          <h2>CORTIS</h2>
+
+          <p>Albums & Photocards</p>
+
+          <a
+            href="products/cortis-album.html"
+            class="details-btn">
+            View Details ♡
+          </a>
+
         </div>
 
       </div>
+
     </section>
 
   </main>
 
+
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.</p>
+
+    <p>
+      &copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.
+    </p>
+
   </footer>
 
 </body>
+
 </html>
