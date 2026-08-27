@@ -6,204 +6,195 @@
     <title>SEAHÉ⭑.ᐟ | Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <style>
-    * {
-        box-sizing: border-box;
-    }
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 45px 30px 60px;
+}
 
-    body {
-        background-color: rgba(230, 230, 230, 0.5);
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        color: #222;
-    }
+/* CONTACT US TITLE */
+main > h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 0 0 45px;
+    color: #222;
+}
 
-    header {
-        background-image: url("leobg.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 60px 20px;
-    }
+main > h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 5px;
+    background-color: #789b91;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
 
-    header h1 {
-        margin: 0 0 10px;
-        font-size: 40px;
-    }
+/* LEFT + RIGHT LAYOUT */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
 
-    header p {
-        margin-bottom: 25px;
-    }
+/* CONTACT CARD */
+.contact {
+    background-color: rgba(220, 230, 226, 0.95);
+    border-radius: 15px;
+    padding: 40px 35px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
 
-    nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 0;
-    }
+.contact h3 {
+    font-size: 30px;
+    margin: 0 0 10px;
+}
 
-    nav li {
-        display: inline;
-        margin: 0 15px;
-    }
+.contact h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 5px;
+    background-color: #789b91;
+    margin-top: 10px;
+    border-radius: 5px;
+}
 
-    nav a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-    }
+.contact p {
+    margin: 25px 0;
+    line-height: 1.6;
+}
 
-    nav a:hover {
-        text-decoration: underline;
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    font-size: 15px;
+}
+
+.contact a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FORM */
+.form {
+    width: 100%;
+}
+
+.form form {
+    height: 100%;
+}
+
+fieldset {
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    padding: 30px 35px;
+    background-image: url("download.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+legend {
+    background-color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* LABELS */
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* KEYBOARD FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #b7d8cf;
+    border-color: #789b91;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #789b91;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5f8379;
+}
+
+button:focus {
+    outline: 3px solid #b7d8cf;
+    outline-offset: 2px;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 
     main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 40px 20px;
+        padding: 30px 15px 45px;
     }
 
-    .contact {
-        background-color: rgba(173, 171, 171, 0.9);
-        padding: 30px;
-        width: 100%;
-        max-width: 700px;
-        border-radius: 15px;
+    main > h2 {
+        font-size: 30px;
     }
 
-    .contact h2 {
-        margin-top: 0;
-    }
-
-    .contact ul {
-        list-style: none;
-        padding: 0;
-        margin: 20px 0 0;
-    }
-
-    .contact li {
-        margin: 10px 0;
-    }
-
-    .contact a {
-        color: #333;
-        font-weight: bold;
-    }
-
-    /* FORM */
-    .form {
-        width: 100%;
-        max-width: 700px;
-    }
-
+    .contact,
     fieldset {
-        background-image: url("background1.jpg");
-        background-size: cover;
-        background-position: center;
-        border: none;
-        border-radius: 15px;
-        padding: 35px 40px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        text-align: left;
+        padding: 30px 25px;
     }
-
-    legend {
-        background-color: white;
-        padding: 8px 18px;
-        border-radius: 20px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    label {
-        display: block;
-        margin-top: 18px;
-        margin-bottom: 7px;
-        font-weight: bold;
-    }
-
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #aaa;
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.9);
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-    }
-
-    textarea {
-        resize: vertical;
-        min-height: 130px;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-        outline: 3px solid #b7d8cf;
-        border-color: #6d9d91;
-    }
-
-    button {
-        display: block;
-        width: 100%;
-        margin-top: 25px;
-        padding: 13px;
-        border: none;
-        border-radius: 8px;
-        background-color: #789b91;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #4d4e4d;
-    }
-
-    button:focus {
-        outline: 3px solid #b5b8b7;
-        outline-offset: 2px;
-    }
-
-    footer {
-        background-color: rgba(230, 230, 230, 0.5);
-        padding: 10px;
-        margin-top: 20px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-        header {
-            padding: 40px 15px;
-        }
-
-        header h1 {
-            font-size: 32px;
-        }
-
-        nav li {
-            margin: 0 8px;
-        }
-
-        main {
-            padding: 25px 15px;
-        }
-
-        .contact {
-            padding: 25px 20px;
-        }
-
-        fieldset {
-            padding: 30px 20px;
-        }
-    }
+}
 </style>
 <body>
 
@@ -219,53 +210,67 @@
             </ul>
         </nav>
     </header>
+ <main>
+    <h2>Contact Us</h2>
 
-    <main>
+    <div class="contact-container">
+
+        <!-- Contact Information -->
         <section class="contact">
-            <h2>Contact Us</h2>
-            <p>Have questions about our albums or photocards? You can reach us through:</p>
+            <h3>Get In Touch</h3>
+
+            <p>Have questions about our albums or photocards?</p>
 
             <ul>
                 <li>
-                    Email:
+                    📍 <span>SEAHÉ K-pop Shop</span>
+                </li>
+
+                <li>
+                    ✉️
                     <a href="mailto:seaheshop@gmail.com">
                         seaheshop@gmail.com
                     </a>
                 </li>
+
                 <li>
-                    Contact no.
-                    <a  href="tel:+63933428791">
-                        +63 9342 8791
+                    📞
+                    <a href="tel:+63933428791">
+                        +63 934 287 91
                     </a>
                 </li>
             </ul>
         </section>
-<section class="form">
-    <form>
-        <fieldset>
-            <legend>Your details</legend>
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <!-- Contact Form -->
+        <section class="form">
+            <form>
+                <fieldset>
+                    <legend>Your details</legend>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
 
-            <label for="subject">Subject</label>
-            <select id="subject" name="subject">
-                <option value="product-question">Product question</option>
-                <option value="order-status">Order status</option>
-                <option value="wholesale">Wholesale enquiry</option>
-                <option value="other">Something else</option>
-            </select>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="product-question">Product question</option>
+                        <option value="order-status">Order status</option>
+                        <option value="wholesale">Wholesale enquiry</option>
+                        <option value="other">Something else</option>
+                    </select>
 
-            <button type="submit">Send message</button>
-        </fieldset>
-    </form>
-</section>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send message</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </div>
 
 </main>
 
