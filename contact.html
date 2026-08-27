@@ -6,7 +6,6 @@
     <title>SEAHÉ⭑.ᐟ | Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <style>
     * {
         box-sizing: border-box;
@@ -58,73 +57,129 @@
         text-decoration: underline;
     }
 
+    /* MAIN CONTENT */
     main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 40px 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 45px 30px 60px;
     }
 
+    /* CONTACT US TITLE */
+    main > h2 {
+        text-align: center;
+        font-size: 36px;
+        margin: 0 0 40px;
+    }
+
+    main > h2::after {
+        content: "";
+        display: block;
+        width: 55px;
+        height: 5px;
+        background-color: #789b91;
+        margin: 12px auto 0;
+        border-radius: 5px;
+    }
+
+    /* TWO COLUMN LAYOUT */
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    /* CONTACT INFORMATION */
     .contact {
         background-color: rgba(173, 171, 171, 0.9);
-        padding: 30px;
+        padding: 40px;
         width: 100%;
-        max-width: 700px;
         border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        text-align: left;
     }
 
-    .contact h2 {
-        margin-top: 0;
+    .contact h3 {
+        font-size: 30px;
+        margin: 0 0 10px;
+    }
+
+    .contact h3::after {
+        content: "";
+        display: block;
+        width: 45px;
+        height: 5px;
+        background-color: #789b91;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .contact p {
+        line-height: 1.6;
+        margin: 25px 0;
     }
 
     .contact ul {
         list-style: none;
         padding: 0;
-        margin: 20px 0 0;
+        margin: 0;
     }
 
     .contact li {
-        margin: 10px 0;
+        margin: 25px 0;
+        line-height: 1.5;
     }
 
     .contact a {
         color: #333;
         font-weight: bold;
+        text-decoration: none;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
     }
 
     /* FORM */
     .form {
         width: 100%;
-        max-width: 700px;
+    }
+
+    .form form {
+        width: 100%;
+        height: 100%;
     }
 
     fieldset {
+        height: 100%;
         background-image: url("download.jpg");
         background-size: cover;
         background-position: center;
         border: none;
         border-radius: 15px;
-        padding: 35px 40px;
+        padding: 30px 35px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         text-align: left;
     }
 
     legend {
         background-color: rgb(104, 96, 100);
+        color: white;
         padding: 8px 18px;
         border-radius: 20px;
         font-size: 20px;
         font-weight: bold;
     }
 
+    /* LABELS */
     label {
         display: block;
-        margin-top: 18px;
+        margin-top: 15px;
         margin-bottom: 7px;
         font-weight: bold;
     }
 
+    /* FORM FIELDS */
     input,
     select,
     textarea {
@@ -139,9 +194,10 @@
 
     textarea {
         resize: vertical;
-        min-height: 130px;
+        min-height: 120px;
     }
 
+    /* KEYBOARD FOCUS */
     input:focus,
     select:focus,
     textarea:focus {
@@ -149,10 +205,11 @@
         border-color: #6d9d91;
     }
 
+    /* SEND BUTTON */
     button {
         display: block;
         width: 100%;
-        margin-top: 25px;
+        margin-top: 20px;
         padding: 13px;
         border: none;
         border-radius: 8px;
@@ -172,6 +229,7 @@
         outline-offset: 2px;
     }
 
+    /* FOOTER */
     footer {
         background-color: rgba(230, 230, 230, 0.5);
         padding: 10px;
@@ -179,7 +237,8 @@
     }
 
     /* MOBILE */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
+
         header {
             padding: 40px 15px;
         }
@@ -193,38 +252,31 @@
         }
 
         main {
-            padding: 25px 15px;
+            padding: 30px 15px 45px;
+        }
+
+        main > h2 {
+            font-size: 30px;
+        }
+
+        .contact-container {
+            grid-template-columns: 1fr;
         }
 
         .contact {
-            padding: 25px 20px;
+            padding: 30px 25px;
         }
 
         fieldset {
-            padding: 30px 20px;
+            padding: 30px 25px;
         }
     }
 </style>
-<body>
-
-    <header>
-        <h1>SEAHÉ⭑.ᐟ</h1>
-        <p>Your haven for official K-pop albums and photocards!</p>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
- <main>
+<main>
     <h2>Contact Us</h2>
 
     <div class="contact-container">
 
-        <!-- Contact Information -->
         <section class="contact">
             <h3>Get In Touch</h3>
 
@@ -232,26 +284,21 @@
 
             <ul>
                 <li>
-                    📍 <span>SEAHÉ K-pop Shop</span>
-                </li>
-
-                <li>
-                    ✉️
+                    📧 Email:
                     <a href="mailto:seaheshop@gmail.com">
                         seaheshop@gmail.com
                     </a>
                 </li>
 
                 <li>
-                    📞
+                    📞 Contact no.
                     <a href="tel:+63933428791">
-                        +63 934 287 91
+                        +63 9342 8791
                     </a>
                 </li>
             </ul>
         </section>
 
-        <!-- Contact Form -->
         <section class="form">
             <form>
                 <fieldset>
@@ -280,7 +327,6 @@
         </section>
 
     </div>
-
 </main>
 
     <footer>
