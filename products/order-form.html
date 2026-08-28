@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Inquiry | SEAHË</title>
+
+    <!-- If your CSS is outside the products folder -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<style>
+       body {
+    background-color: rgba(230, 230, 230, 0.5);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-image: url("../leobg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.owner {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 70%;
+    max-width: 700px;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: rgba(230, 230, 230, 0.5);
+    padding: 10px;
+}
+
+.order-form {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.order-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.order-form form {
+    margin-top: 25px;
+}
+
+
+/* Form Groups */
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* Number & Email */
+
+.form-group input[type="number"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f8f8f8;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #777777;
+    background-color: white;
+}
+
+
+/* Fieldsets */
+
+.order-form fieldset {
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 22px;
+    background-color: #fafafa;
+}
+
+
+/* Legends */
+
+.order-form legend {
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 17px;
+}
+
+
+/* Radio & Checkbox Choices */
+
+.choice {
+    margin: 12px 0;
+}
+
+.choice label {
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+.choice input {
+    cursor: pointer;
+}
+
+
+/* Submit Button */
+
+.order-form button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #222222;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-form button:hover {
+    background-color: #555555;
+    transform: translateY(-2px);
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    background-color: #eeeeee;
+}
+/* Dropdown Menus */
+
+.order-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.order-form select:focus {
+    outline: none;
+    border-color: #777777;
+    background-color: white;
+}
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+        header {
+            padding: 40px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        nav li {
+            margin: 0 8px;
+        }
+
+        main {
+            padding: 30px 15px 45px;
+        }
+
+        main > h2 {
+            font-size: 30px;
+        }
+
+        .contact-container {
+            grid-template-columns: 1fr;
+        }
+
+        .contact {
+            padding: 30px 25px;
+        }
+
+        fieldset {
+            padding: 30px 25px;
+        }
+    }
+</style>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>SEAHË*¨</h1>
+        <p>Your haven for official K-pop albums and photocards!</p>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="product.html">🛒 Order</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Product Information -->
+    <main>
+
+        <section class="product">
+            <h2>Order Inquiry</h2>
+
+            <p>
+                Interested in ordering this product?
+                Fill out the form below and we'll get back to you!
+            </p>
+        </section>
+
+
+        <!-- ORDER FORM -->
+        <section class="order-form">
+
+            <h2> 𐙚 Order Inquiry Form</h2>
+
+            <form>
+                <!-- K-pop Group -->
+               <div class="form-group">
+            <label for="group">K-pop Group:</label>
+
+            <select id="group" name="group" required>
+                <option value="">-- Select a group --</option>
+                <option value="enhypen">ENHYPEN</option>
+                <option value="bts">BTS</option>
+                <option value="cortis">CORTIS</option>
+                 </select>
+                </div>
+            <!-- Album Type -->
+              <div class="form-group">
+            <label for="album-type">Type of Album:</label>
+
+            <select id="album-type" name="album-type" required>
+                <option value="">-- Select album type --</option>
+                <option value="mini-album">Mini Album</option>
+                <option value="full-album">Full Album</option>
+                <option value="single-album">Single Album</option>
+                <option value="special-album">Special Album</option>
+                <option value="repackage">Repackage Album</option>
+              </select>
+            </div>
+
+                <!-- Quantity -->
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        name="quantity"
+                        min="1"
+                        max="20"
+                        value="1"
+                        required
+                    >
+                </div>
+
+
+                <!-- Delivery Method -->
+                <fieldset>
+
+                    <legend>Delivery Method</legend>
+
+                    <div class="choice">
+                        <input
+                            type="radio"
+                            id="standard"
+                            name="delivery"
+                            value="standard"
+                            required
+                        >
+
+                        <label for="standard">
+                            Standard Delivery
+                        </label>
+                    </div>
+
+
+                    <div class="choice">
+                        <input
+                            type="radio"
+                            id="express"
+                            name="delivery"
+                            value="express"
+                        >
+
+                        <label for="express">
+                            Express Delivery
+                        </label>
+                    </div>
+
+
+                    <div class="choice">
+                        <input
+                            type="radio"
+                            id="pickup"
+                            name="delivery"
+                            value="pickup"
+                        >
+
+                        <label for="pickup">
+                            Store Pickup
+                        </label>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Optional Extras -->
+                <fieldset>
+
+                    <legend>Optional Extras</legend>
+
+                    <div class="choice">
+                        <input
+                            type="checkbox"
+                            id="gift"
+                            name="extras"
+                            value="gift-wrapping"
+                        >
+
+                        <label for="gift">
+                            🎁 Gift Wrapping
+                        </label>
+                    </div>
+
+
+                    <div class="choice">
+                        <input
+                            type="checkbox"
+                            id="express-handling"
+                            name="extras"
+                            value="express-handling"
+                        >
+
+                        <label for="express-handling">
+                            ⚡ Express Handling
+                        </label>
+                    </div>
+
+
+                    <div class="choice">
+                        <input
+                            type="checkbox"
+                            id="note"
+                            name="extras"
+                            value="personal-note"
+                        >
+
+                        <label for="note">
+                            💌 Personal Note
+                        </label>
+                    </div>
+
+                </fieldset>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Contact Email:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit">
+                     Send Order Inquiry 𖹭
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 SEAHË*¨. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
