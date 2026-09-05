@@ -108,7 +108,7 @@ footer {
 
 .product-card {
     background-color: white;
-    border: 1px solid #dddddd;
+    border: 1px solid #5a5a5a;
     border-radius: 12px;
     padding: 20px;
     margin: 20px 0;
@@ -188,4 +188,116 @@ textarea {
 textarea {
     min-height: 150px;
     resize: vertical;
+}
+
+/* ========================================
+   4. PRODUCT CARDS
+   ======================================== */
+
+.product-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    border-left: 6px solid var(--brand);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.product-card img {
+    max-width: 300px;
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product-card h2,
+.product-card h3 {
+    font-size: 24px;
+    color: var(--dark-ink);
+    margin-top: 0;
+}
+
+.product-card p {
+    color: var(--muted-grey);
+}
+
+
+/* ========================================
+   5. CONTACT FORM
+   ======================================== */
+
+form {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+fieldset {
+    border: 2px solid var(--brand);
+    border-radius: 12px;
+    padding: 25px;
+    background-color: var(--card-background);
+}
+
+legend {
+    color: var(--dark-ink);
+    background-color: var(--brand);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid var(--muted-grey);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+
+/* Keyboard focus state */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
+}
+
+
+/* Submit button */
+
+button[type="submit"] {
+    background-color: var(--dark-ink);
+    color: rgb(178, 173, 173);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+button[type="submit"]:focus {
+    outline: 3px solid var(--brand);
+    outline-offset: 2px;
 }
