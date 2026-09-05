@@ -1,0 +1,191 @@
+/* ========================================
+   1. VARIABLES
+   ======================================== */
+
+:root {
+    --brand-color: #f3f1f2;
+    --dark-ink: #5e5c5c;
+    --muted-grey: #777777;
+    --light-background: #fff7f3;
+}
+
+
+/* ========================================
+   2. BASE STYLES
+   ======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-ink);
+    background-color: var(--light-background);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ========================================
+   3. LAYOUT REGIONS
+   ======================================== */
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--brand-color);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: var(--dark-ink);
+    padding: 15px 30px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--dark-ink);
+    color: white;
+    margin-top: 40px;
+}
+
+
+/* ========================================
+   4. COMPONENTS
+   ======================================== */
+
+/* Product Cards */
+
+.product-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 15px;
+    border-radius: 8px;
+}
+
+.product-card h2,
+.product-card h3 {
+    margin-top: 0;
+    color: var(--dark-ink);
+}
+
+.product-card p {
+    color: var(--muted-grey);
+}
+
+.product-card .price {
+    color: var(--dark-ink);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/* Buttons */
+
+button,
+.button {
+    display: inline-block;
+    background-color: var(--brand-color);
+    color: var(--dark-ink);
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    opacity: 0.8;
+}
+
+
+/* Forms */
+
+form {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--muted-grey);
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
