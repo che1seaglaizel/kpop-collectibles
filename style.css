@@ -200,6 +200,7 @@ textarea {
     border-left: 6px solid var(--brand);
     padding: 20px;
     margin-bottom: 25px;
+    flex: 1 1 240px;
 }
 
 .product-card img {
@@ -320,4 +321,13 @@ button[type="submit"]:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.product-card {
+  flex: 1 1 240px;
 }
