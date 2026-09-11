@@ -6,7 +6,7 @@
     --brand-color: #f3f1f2;
     --dark-ink: #5e5c5c;
     --muted-grey: #777777;
-    --light-background: #fff7f3;
+    --light-background: #dddddd;
 }
 
 
@@ -300,4 +300,24 @@ button[type="submit"]:hover {
 button[type="submit"]:focus {
     outline: 3px solid var(--brand);
     outline-offset: 2px;
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 20px;
+}
+.site-header nav li {
+  list-style: none;
+}
+.hero {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
