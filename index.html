@@ -7,242 +7,215 @@
 
   <title>SEAHÉ⭑.ᐟ | K-Pop Shop</title>
 
-  <style>
-    body {
-      background-image: url("leobg.jpg");
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      padding: 20px;
-    }
-
-    header h1 {
-      margin-bottom: 5px;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav li {
-      display: inline-block;
-      margin: 0 15px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 25px;
-      margin: 30px auto;
-      width: 70%;
-      border-radius: 15px;
-    }
-
-    img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .folder-container {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    .folder {
-      background-color: rgba(255, 255, 255, 0.9);
-      width: 180px;
-      padding: 20px;
-      border-radius: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .folder:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .folder-icon {
-      font-size: 50px;
-    }
-
-    .folder h2 {
-      margin: 10px 0 5px;
-    }
-
-    .folder p {
-      margin-bottom: 15px;
-    }
-
-    .details-btn {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: white;
-      color: black;
-      text-decoration: none;
-      border: 1px solid black;
-      border-radius: 20px;
-      font-weight: bold;
-    }
-
-    .details-btn:hover {
-      background-color: black;
-      color: white;
-    }
-
-    footer {
-      padding: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-<header  class="site-header">
+  <div class="page">
 
-    <h1>SEAHÉ⭑.ᐟ</h1>
+    <!-- ================= HEADER ================= -->
 
-    <p>Your haven for official K-pop albums and photocards!</p>
- 
- <head>
-    <link rel="stylesheet" href="style.css">
- </head>
-    <!-- NAVIGATION -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="products/order-form.html">🛒 Order</a></li>
+    <header class="site-header">
+
+      <div class="logo">
+        <h1>SEAHÉ⭑.ᐟ</h1>
+        <p>Your haven for official K-pop albums and photocards!</p>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="about.html">About</a>
+          </li>
+
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+
+          <li>
+            <a href="products/order-form.html">🛒 Order</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+      <h2>♡ Categories ♡</h2>
+
+      <ul class="category-list">
+
+        <li>
+          <a href="products/enhypen-album.html">
+            ENHYPEN
+          </a>
+        </li>
+
+        <li>
+          <a href="products/bts-album.html">
+            BTS
+          </a>
+        </li>
+
+        <li>
+          <a href="products/cortis-album.html">
+            CORTIS
+          </a>
+        </li>
+
       </ul>
-    </nav>
-
-  </header>
 
 
-  <!-- MAIN CONTENT -->
-  <main>
+      <div class="why-shop">
 
-    <!-- SHOP INTRODUCTION -->
-    <section>
+        <h2>Why Shop With Us?</h2>
 
-      <h2>⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</h2>
-
-      <p>
-        SEAHÉ is a K-pop shop offering official albums and photocards
-        from ENHYPEN, BTS, and CORTIS. We bring authentic K-pop
-        merchandise closer to fellow fans and collectors.
-      </p>
-
-      <img src="ganda.jpg" alt="SEAHÉ K-pop Shop">
-
-    </section>
-
-
-    <!-- K-POP COLLECTIONS -->
-    <section>
-
-      <h2>♡ Shop Collections ♡</h2>
-
-      <div class="folder-container">
-
-
-        <!-- ENHYPEN -->
-        <div class="folder">
-
-          <div class="folder-icon">📁</div>
-
-          <h2>ENHYPEN</h2>
-
-          <p>Albums & Photocards</p>
-
-          <a
-            href="products/enhypen-album.html"
-            class="details-btn">
-            View Details ♡
-          </a>
-
-        </div>
-
-
-        <!-- BTS -->
-        <div class="folder">
-
-          <div class="folder-icon">📁</div>
-
-          <h2>BTS</h2>
-
-          <p>Albums & Photocards</p>
-
-          <a
-            href="products/bts-album.html"
-            class="details-btn">
-            View Details ♡
-          </a>
-
-        </div>
-
-
-        <!-- CORTIS -->
-        <div class="folder">
-
-          <div class="folder-icon">📁</div>
-
-          <h2>CORTIS</h2>
-
-          <p>Albums & Photocards</p>
-
-          <a
-            href="products/cortis-album.html"
-            class="details-btn">
-            View Details ♡
-          </a>
-
-        </div>
+        <p>
+          SEAHÉ offers official K-pop albums and photocards
+          for fans and collectors.
+        </p>
 
       </div>
 
-    </section>
-
-  </main>
+    </aside>
 
 
-  <!-- FOOTER -->
-  <footer>
+    <!-- ================= MAIN CONTENT ================= -->
 
-    <p>
-      &copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.
-    </p>
+    <main>
 
-  </footer>
+      <!-- SHOP INTRODUCTION -->
+
+      <section class="intro-section">
+
+        <h2>⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹</h2>
+
+        <p>
+          SEAHÉ is a K-pop shop offering official albums and
+          photocards from ENHYPEN, BTS, and CORTIS.
+          We bring authentic K-pop merchandise closer
+          to fellow fans and collectors.
+        </p>
+
+        <img
+          src="ganda.jpg"
+          alt="SEAHÉ K-pop Shop">
+
+      </section>
+
+
+      <!-- K-POP COLLECTIONS -->
+
+      <section class="collections-section">
+
+        <h2>♡ Shop Collections ♡</h2>
+
+        <div class="folder-container">
+
+
+          <!-- ENHYPEN -->
+
+          <div class="folder">
+
+            <div class="folder-icon">
+              📁
+            </div>
+
+            <h2>ENHYPEN</h2>
+
+            <p>
+              Albums & Photocards
+            </p>
+
+            <a
+              href="products/enhypen-album.html"
+              class="details-btn">
+
+              View Details ♡
+
+            </a>
+
+          </div>
+
+
+          <!-- BTS -->
+
+          <div class="folder">
+
+            <div class="folder-icon">
+              📁
+            </div>
+
+            <h2>BTS</h2>
+
+            <p>
+              Albums & Photocards
+            </p>
+
+            <a
+              href="products/bts-album.html"
+              class="details-btn">
+
+              View Details ♡
+
+            </a>
+
+          </div>
+
+
+          <!-- CORTIS -->
+
+          <div class="folder">
+
+            <div class="folder-icon">
+              📁
+            </div>
+
+            <h2>CORTIS</h2>
+
+            <p>
+              Albums & Photocards
+            </p>
+
+            <a
+              href="products/cortis-album.html"
+              class="details-btn">
+
+              View Details ♡
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+      <p>
+        &copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.
+      </p>
+
+    </footer>
+
+  </div>
 
 </body>
 

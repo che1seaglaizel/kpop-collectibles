@@ -7,6 +7,7 @@
     --dark-ink: #5e5c5c;
     --muted-grey: #777777;
     --light-background: #dddddd;
+    --card-background: #ffffff;
 }
 
 
@@ -23,7 +24,14 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--dark-ink);
-    background-color: var(--light-background);
+
+    /* Your shop background */
+    background-image: url("leobg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
 }
 
 img {
@@ -33,100 +41,318 @@ img {
 
 
 /* ========================================
-   3. LAYOUT REGIONS
+   3. PAGE GRID LAYOUT
    ======================================== */
 
-/* Header */
+.page {
+    min-height: 100vh;
 
-header {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--brand-color);
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-areas:
+        "masthead masthead"
+        "side     main"
+        "foot     foot";
+
+    gap: 16px;
 }
 
-header h1 {
+
+/* ========================================
+   4. HEADER
+   ======================================== */
+
+header {
+    grid-area: masthead;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
     margin: 0;
     font-size: 40px;
 }
 
+.site-header p {
+    margin: 5px 0 0;
+}
 
-/* Navigation */
+
+/* ========================================
+   5. NAVIGATION
+   ======================================== */
 
 nav {
     background-color: var(--dark-ink);
-    padding: 15px 30px;
-    text-align: center;
 }
 
 nav ul {
     list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
     padding: 0;
     margin: 0;
 }
 
 nav li {
-    display: inline-block;
-    margin: 0 15px;
+    list-style: none;
+    margin: 0;
 }
 
 nav a {
+    display: block;
+
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
+    padding: 15px 20px;
 }
 
 nav a:hover {
+    background-color: #777777;
     text-decoration: underline;
 }
 
 
-/* Main */
+/* ========================================
+   6. SIDEBAR
+   ======================================== */
 
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
+aside {
+    grid-area: side;
+
+    background-color: rgba(255, 255, 255, 0.90);
+
+    margin: 0 0 0 15px;
+
+    padding: 25px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    align-self: start;
+}
+
+aside h2 {
+    margin-top: 0;
+
+    color: var(--dark-ink);
+
+    font-size: 21px;
 }
 
 
-/* Footer */
+/* Sidebar category list */
 
-footer {
+.category-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 20px 0 35px;
+}
+
+.category-list li {
+    margin: 10px 0;
+}
+
+.category-list a {
+    display: block;
+
+    color: var(--dark-ink);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 8px;
+
+    border-radius: 8px;
+}
+
+.category-list a:hover {
+    background-color: #eeeeee;
+
+    text-decoration: underline;
+}
+
+
+/* Why shop */
+
+.why-shop {
+    border-top: 1px solid #cccccc;
+
+    padding-top: 20px;
+}
+
+.why-shop p {
+    font-size: 14px;
+
+    line-height: 1.6;
+
     text-align: center;
-    padding: 25px;
-    background-color: var(--dark-ink);
-    color: white;
-    margin-top: 40px;
 }
 
 
 /* ========================================
-   4. COMPONENTS
+   7. MAIN
    ======================================== */
 
-/* Product Cards */
+main {
+    grid-area: main;
+
+    width: 100%;
+
+    min-width: 0;
+
+    padding: 0 30px 20px 0;
+}
+
+
+/* ========================================
+   8. SECTIONS
+   ======================================== */
+
+section {
+    background-color: rgba(255, 255, 255, 0.90);
+
+    padding: 25px;
+
+    margin: 0 0 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   9. HERO
+   ======================================== */
+
+.hero {
+    min-height: 300px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   10. SHOP INTRODUCTION
+   ======================================== */
+
+.intro-section h2 {
+    margin-top: 0;
+}
+
+.intro-section p {
+    max-width: 800px;
+
+    margin: 20px auto;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   11. PRODUCT / COLLECTION FLEXBOX
+   ======================================== */
+
+.product-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    justify-content: center;
+}
+
+
+/* Your folder/product row */
+
+.folder-container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+}
+
+
+/* ========================================
+   12. PRODUCT CARDS
+   ======================================== */
 
 .product-card {
-    background-color: white;
+    background-color: var(--card-background);
+
     border: 1px solid #5a5a5a;
+
     border-radius: 12px;
+
     padding: 20px;
-    margin: 20px 0;
+
+    margin-bottom: 25px;
+
+    flex: 1 1 240px;
+
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
 .product-card img {
     display: block;
+
     width: 100%;
+
     max-width: 300px;
+
     margin: 0 auto 15px;
+
     border-radius: 8px;
 }
 
 .product-card h2,
 .product-card h3 {
     margin-top: 0;
+
     color: var(--dark-ink);
+
+    font-size: 24px;
 }
 
 .product-card p {
@@ -135,121 +361,126 @@ footer {
 
 .product-card .price {
     color: var(--dark-ink);
+
     font-weight: bold;
+
     font-size: 20px;
 }
 
 
-/* Buttons */
+/* ========================================
+   13. FOLDER CARDS
+   ======================================== */
+
+.folder {
+    background-color: rgba(255, 255, 255, 0.95);
+
+    width: 180px;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+.folder:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.folder-icon {
+    font-size: 50px;
+}
+
+.folder h2 {
+    margin: 10px 0 5px;
+
+    color: var(--dark-ink);
+}
+
+.folder p {
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   14. BUTTONS
+   ======================================== */
 
 button,
-.button {
+.button,
+.details-btn {
     display: inline-block;
-    background-color: var(--brand-color);
+
+    background-color: white;
+
     color: var(--dark-ink);
-    border: none;
+
+    border: 1px solid var(--dark-ink);
+
     padding: 10px 18px;
-    border-radius: 8px;
+
+    border-radius: 20px;
+
     text-decoration: none;
+
     font-weight: bold;
+
     cursor: pointer;
 }
 
 button:hover,
-.button:hover {
-    opacity: 0.8;
-}
+.button:hover,
+.details-btn:hover {
+    background-color: var(--dark-ink);
 
-
-/* Forms */
-
-form {
-    max-width: 700px;
-    margin: 20px auto;
-}
-
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid var(--muted-grey);
-    border-radius: 6px;
-    font-family: inherit;
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-/* ========================================
-   4. PRODUCT CARDS
-   ======================================== */
-
-.product-card {
-    background-color: var(--card-background);
-    border-radius: 12px;
-    border-left: 6px solid var(--brand);
-    padding: 20px;
-    margin-bottom: 25px;
-    flex: 1 1 240px;
-}
-
-.product-card img {
-    max-width: 300px;
-    width: 100%;
-    display: block;
-    margin-bottom: 15px;
-    border-radius: 8px;
-}
-
-.product-card h2,
-.product-card h3 {
-    font-size: 24px;
-    color: var(--dark-ink);
-    margin-top: 0;
-}
-
-.product-card p {
-    color: var(--muted-grey);
+    color: white;
 }
 
 
 /* ========================================
-   5. CONTACT FORM
+   15. FORMS
    ======================================== */
 
 form {
     max-width: 700px;
+
     margin: 20px auto;
 }
 
 fieldset {
-    border: 2px solid var(--brand);
+    border: 2px solid var(--dark-ink);
+
     border-radius: 12px;
+
     padding: 25px;
+
     background-color: var(--card-background);
 }
 
 legend {
     color: var(--dark-ink);
-    background-color: var(--brand);
+
+    background-color: var(--brand-color);
+
     padding: 6px 14px;
+
     border-radius: 6px;
+
     font-weight: bold;
 }
 
 label {
     display: block;
+
     margin-top: 15px;
+
     font-weight: bold;
 }
 
@@ -257,40 +488,59 @@ input,
 select,
 textarea {
     width: 100%;
+
     padding: 12px;
+
     margin-top: 6px;
+
     border: 1px solid var(--muted-grey);
+
     border-radius: 6px;
+
     font-family: inherit;
+
     font-size: 16px;
 }
 
 textarea {
     min-height: 150px;
+
     resize: vertical;
 }
 
 
-/* Keyboard focus state */
+/* ========================================
+   16. FORM FOCUS
+   ======================================== */
 
 input:focus,
 select:focus,
 textarea:focus {
-    outline: 3px solid var(--brand);
+    outline: 3px solid var(--dark-ink);
+
     outline-offset: 2px;
 }
 
 
-/* Submit button */
+/* ========================================
+   17. SUBMIT BUTTON
+   ======================================== */
 
 button[type="submit"] {
     background-color: var(--dark-ink);
-    color: rgb(178, 173, 173);
+
+    color: white;
+
     padding: 12px 24px;
+
     border: none;
+
     border-radius: 6px;
+
     cursor: pointer;
+
     font-size: 16px;
+
     margin-top: 20px;
 }
 
@@ -299,35 +549,177 @@ button[type="submit"]:hover {
 }
 
 button[type="submit"]:focus {
-    outline: 3px solid var(--brand);
+    outline: 3px solid var(--dark-ink);
+
     outline-offset: 2px;
 }
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+/* ========================================
+   18. FOOTER
+   ======================================== */
+
+footer {
+    grid-area: foot;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: var(--dark-ink);
+
+    color: white;
 }
 
-.site-header nav ul {
-  display: flex;
-  gap: 20px;
+
+/* ========================================
+   19. MOBILE / RESPONSIVE
+   ======================================== */
+
+@media (max-width: 800px) {
+
+    .page {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "masthead"
+            "side"
+            "main"
+            "foot";
+    }
+
+    header,
+    .site-header {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    .site-header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    aside {
+        margin: 0 15px;
+    }
+
+    main {
+        padding: 0 15px 20px;
+    }
+
+    .folder-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .product-grid {
+        flex-direction: column;
+    }
 }
-.site-header nav li {
-  list-style: none;
-}
-.hero {
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+/* ========================================
+   7.1 BTS PRODUCT DETAIL PAGE
+   ======================================== */
+
+.product-details {
+    background-color: rgba(255, 255, 255, 0.90);
+
+    padding: 30px;
+
+    margin: 0 auto;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    border-radius: 15px;
+
+    text-align: center;
 }
 
-.product-card {
-  flex: 1 1 240px;
+.product-details p {
+    line-height: 1.6;
+}
+
+.product-image {
+    width: 350px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    margin: 20px;
+}
+
+.product-details .price {
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: var(--dark-ink);
+}
+
+
+/* ========================================
+   7.2 PRODUCT TABLE
+   ======================================== */
+
+.product-details table {
+    width: 80%;
+
+    margin: 25px auto;
+
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+.product-details th,
+.product-details td {
+    border: 1px solid #aaa;
+
+    padding: 12px;
+}
+
+.product-details th {
+    background-color: #f0e6ec;
+}
+
+
+/* ========================================
+   7.3 BACK BUTTON
+   ======================================== */
+
+.back-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 20px;
+
+    background-color: white;
+
+    color: #333;
+
+    text-decoration: none;
+
+    border-radius: 20px;
+
+    border: 1px solid #333;
+}
+
+.back-btn:hover {
+    background-color: #333;
+
+    color: white;
 }

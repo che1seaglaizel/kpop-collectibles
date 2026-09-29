@@ -1,351 +1,752 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEAHÉ⭑.ᐟ | Contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<style>
-    * {
-        box-sizing: border-box;
-    }
 
-    body {
-        background-color: rgba(230, 230, 230, 0.5);
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        color: #222;
-    }
+    <title>SEAHÉ⭑.ᐟ | Contact</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ========================================
+         INTERNAL CSS
+         ======================================== -->
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(230, 230, 230, 0.5);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            color: #222;
+        }
+
+
+        /* ========================================
+           1. PAGE GRID LAYOUT
+           ======================================== */
+
+        .page {
+            min-height: 100vh;
+
+            display: grid;
+
+            grid-template-columns: 220px 1fr;
+
+            grid-template-areas:
+                "masthead masthead"
+                "side     main"
+                "foot     foot";
+
+            gap: 16px;
+        }
+
+
+        header {
+            grid-area: masthead;
+
+            background-color: rgba(255, 255, 255, 0.92);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            padding: 60px 20px;
+        }
+
+
+        aside {
+            grid-area: side;
+
+            background-color: rgba(255, 255, 255, 0.90);
+
+            padding: 25px 20px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            align-self: start;
+        }
+
+
+        main {
+            grid-area: main;
+
+            max-width: 1100px;
+
+            width: 100%;
+
+            margin: 0 auto;
+
+            padding: 45px 30px 60px;
+        }
+
+
+        footer {
+            grid-area: foot;
+
+            background-color: rgba(230, 230, 230, 0.5);
+
+            padding: 10px;
+
+            margin-top: 20px;
+        }
+
+
+     /* ========================================
+   2. HEADER
+   ======================================== */
 
     header {
-        background-image: url("leobg.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 60px 20px;
+        grid-area: masthead;
+
+        background-color: rgba(255, 255, 255, 0.92);
+
+        padding: 30px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    header h1 {
-        margin: 0 0 10px;
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .site-header h1 {
+        margin: 0;
         font-size: 40px;
     }
 
-    header p {
-        margin-bottom: 25px;
+    .site-header p {
+        margin: 5px 0 0;
+    }
+
+       /* ========================================
+   3. NAVIGATION
+   ======================================== */
+
+    nav {
+        background-color: var(--dark-ink);
     }
 
     nav ul {
         list-style: none;
-        padding: 0;
-        margin: 20px 0 0;
-    }
 
-    nav li {
-        display: inline;
-        margin: 0 15px;
-    }
+        display: flex;
+        align-items: center;
 
-    nav a {
-        text-decoration: none;
-        color: black;
-        font-weight: bold;
-    }
+        gap: 20px;
 
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    /* MAIN CONTENT */
-    main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 45px 30px 60px;
-    }
-
-    /* CONTACT US TITLE */
-    main > h2 {
-        text-align: center;
-        font-size: 36px;
-        margin: 0 0 40px;
-    }
-
-    main > h2::after {
-        content: "";
-        display: block;
-        width: 55px;
-        height: 5px;
-        background-color: #789b91;
-        margin: 12px auto 0;
-        border-radius: 5px;
-    }
-
-    /* TWO COLUMN LAYOUT */
-    .contact-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        align-items: stretch;
-    }
-
-    /* CONTACT INFORMATION */
-    .contact {
-        background-color: rgba(173, 171, 171, 0.9);
-        padding: 40px;
-        width: 100%;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        text-align: left;
-    }
-
-    .contact h3 {
-        font-size: 30px;
-        margin: 0 0 10px;
-    }
-
-    .contact h3::after {
-        content: "";
-        display: block;
-        width: 45px;
-        height: 5px;
-        background-color: #789b91;
-        margin-top: 10px;
-        border-radius: 5px;
-    }
-
-    .contact p {
-        line-height: 1.6;
-        margin: 25px 0;
-    }
-
-    .contact ul {
-        list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    .contact li {
-        margin: 25px 0;
-        line-height: 1.5;
+    nav li {
+        list-style: none;
+        margin: 0;
     }
 
-    .contact a {
-        color: #333;
-        font-weight: bold;
+    nav a {
+        isplay: block;
+
+        color: white;
+
         text-decoration: none;
+
+        font-weight: bold;
+
+        padding: 15px 20px;
     }
 
-    .contact a:hover {
+    nav a:hover {
+        background-color: #777777;
         text-decoration: underline;
     }
 
-    /* FORM */
-    .form {
-        width: 100%;
-    }
 
-    .form form {
-        width: 100%;
-        height: 100%;
-    }
-
-    fieldset {
-        height: 100%;
-        background-image: url("download.jpg");
-        background-size: cover;
-        background-position: center;
-        border: none;
-        border-radius: 15px;
-        padding: 30px 35px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        text-align: left;
-    }
-
-    legend {
-        background-color: rgb(104, 96, 100);
-        color: white;
-        padding: 8px 18px;
-        border-radius: 20px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    /* LABELS */
-    label {
-        display: block;
-        margin-top: 15px;
-        margin-bottom: 7px;
-        font-weight: bold;
-    }
-
-    /* FORM FIELDS */
-    input,
-    select,
-    textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #aaa;
-        border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.9);
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-    }
-
-    textarea {
-        resize: vertical;
-        min-height: 120px;
-    }
-
-    /* KEYBOARD FOCUS */
-    input:focus,
-    select:focus,
-    textarea:focus {
-        outline: 3px solid #b7d8cf;
-        border-color: #6d9d91;
-    }
-
-    /* SEND BUTTON */
-    button {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-        padding: 13px;
-        border: none;
-        border-radius: 8px;
-        background-color: #789b91;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #4d4e4d;
-    }
-
-    button:focus {
-        outline: 3px solid #b5b8b7;
-        outline-offset: 2px;
-    }
-
-    /* FOOTER */
-    footer {
-        background-color: rgba(230, 230, 230, 0.5);
-        padding: 10px;
-        margin-top: 20px;
-    }
-
-    /* MOBILE */
-    @media (max-width: 700px) {
-
-        header {
-            padding: 40px 15px;
-        }
-
-        header h1 {
-            font-size: 32px;
-        }
-
-        nav li {
-            margin: 0 8px;
-        }
-
-        main {
-            padding: 30px 15px 45px;
-        }
+        /* ========================================
+           4. CONTACT US TITLE
+           ======================================== */
 
         main > h2 {
-            font-size: 30px;
+            text-align: center;
+
+            font-size: 36px;
+
+            margin: 0 0 40px;
         }
+
+        main > h2::after {
+            content: "";
+
+            display: block;
+
+            width: 55px;
+
+            height: 5px;
+
+            background-color: #789b91;
+
+            margin: 12px auto 0;
+
+            border-radius: 5px;
+        }
+
+
+        /* ========================================
+           5. CONTACT TWO-COLUMN LAYOUT
+           ======================================== */
 
         .contact-container {
-            grid-template-columns: 1fr;
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+            align-items: stretch;
         }
 
+
+        /* ========================================
+           6. CONTACT INFORMATION
+           ======================================== */
+
         .contact {
-            padding: 30px 25px;
+            background-color: rgba(173, 171, 171, 0.9);
+
+            padding: 40px;
+
+            width: 100%;
+
+            border-radius: 15px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+            text-align: left;
+        }
+
+        .contact h3 {
+            font-size: 30px;
+
+            margin: 0 0 10px;
+        }
+
+        .contact h3::after {
+            content: "";
+
+            display: block;
+
+            width: 45px;
+
+            height: 5px;
+
+            background-color: #789b91;
+
+            margin-top: 10px;
+
+            border-radius: 5px;
+        }
+
+        .contact p {
+            line-height: 1.6;
+
+            margin: 25px 0;
+        }
+
+        .contact ul {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .contact li {
+            margin: 25px 0;
+
+            line-height: 1.5;
+        }
+
+        .contact a {
+            color: #333;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* ========================================
+           7. FORM
+           ======================================== */
+
+        .form {
+            width: 100%;
+        }
+
+        .form form {
+            width: 100%;
+
+            height: 100%;
         }
 
         fieldset {
-            padding: 30px 25px;
-        }
-    }
-</style>
-<header> <h1>SEAHÉ⭑.ᐟ</h1> 
-    <p>Your haven for official K-pop albums and photocards!</p> 
+            height: 100%;
 
-    <head>
-    <link rel="stylesheet" href="style.css">
+            background-image: url("download.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            border: none;
+
+            border-radius: 15px;
+
+            padding: 30px 35px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+            text-align: left;
+        }
+
+        legend {
+            background-color: rgb(104, 96, 100);
+
+            color: white;
+
+            padding: 8px 18px;
+
+            border-radius: 20px;
+
+            font-size: 20px;
+
+            font-weight: bold;
+        }
+
+
+        /* ========================================
+           8. FORM LABELS
+           ======================================== */
+
+        label {
+            display: block;
+
+            margin-top: 15px;
+
+            margin-bottom: 7px;
+
+            font-weight: bold;
+        }
+
+
+        /* ========================================
+           9. FORM FIELDS
+           ======================================== */
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #aaa;
+
+            border-radius: 8px;
+
+            background-color: rgba(255, 255, 255, 0.9);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+
+            min-height: 120px;
+        }
+
+
+        /* ========================================
+           10. KEYBOARD FOCUS
+           ======================================== */
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid #b7d8cf;
+
+            border-color: #6d9d91;
+        }
+
+
+        /* ========================================
+           11. SEND BUTTON
+           ======================================== */
+
+        button {
+            display: block;
+
+            width: 100%;
+
+            margin-top: 20px;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background-color: #789b91;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4d4e4d;
+        }
+
+        button:focus {
+            outline: 3px solid #b5b8b7;
+
+            outline-offset: 2px;
+        }
+    footer {
+        grid-area: foot;
+
+        text-align: center;
+
+        padding: 25px;
+
+        background-color: var(--dark-ink);
+
+        color: white;
+    }
+
+
+        /* ========================================
+           12. MOBILE / RESPONSIVE
+           ======================================== */
+
+        @media (max-width: 700px) {
+
+            .page {
+                grid-template-columns: 1fr;
+
+                grid-template-areas:
+                    "masthead"
+                    "side"
+                    "main"
+                    "foot";
+            }
+
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 10px;
+            }
+
+            nav li {
+                margin: 0 8px;
+            }
+
+            main {
+                padding: 30px 15px 45px;
+            }
+
+            main > h2 {
+                font-size: 30px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                padding: 30px 25px;
+            }
+
+            fieldset {
+                padding: 30px 25px;
+            }
+        }
+
+    </style>
 </head>
 
-    <nav> <ul> <li><a href="index.html">Home</a></li>
-         <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="products/order-form.html">🛒 Order</a></li>
-         </ul> 
-        </nav>
-     </header>
-<main>
-    <h2>Contact Us</h2>
 
-    <div class="contact-container">
+<body>
 
-        <section class="contact">
-            <h3>Get In Touch</h3>
+    <div class="page">
 
-            <p>Have questions about our albums or photocards?</p>
 
-            <ul>
+        <!-- ========================================
+             HEADER
+             ======================================== -->
+
+        <header class="site-header">
+
+            <div>
+                <h1>SEAHÉ⭑.ᐟ</h1>
+
+                <p>
+                    Your haven for official K-pop albums and photocards!
+                </p>
+            </div>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="products/order-form.html">🛒 Order</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </header>
+
+
+        <!-- ========================================
+             SIDEBAR
+             ======================================== -->
+
+        <aside>
+
+            <h2>Shop Categories</h2>
+
+            <ul class="category-list">
+
                 <li>
-                    📧 Email:
-                    <a href="mailto:seaheshop@gmail.com">
-                        seaheshop@gmail.com
+                    <a href="products/enhypen.html">
+                        ENHYPEN
                     </a>
                 </li>
 
                 <li>
-                    📞 Contact no.
-                    <a href="tel:+63933428791">
-                        +63 9342 8791
+                    <a href="products/bts.html">
+                        BTS
                     </a>
                 </li>
+
+                <li>
+                    <a href="products/cortis.html">
+                        CORTIS
+                    </a>
+                </li>
+
             </ul>
-        </section>
 
-        <section class="form">
-            <form>
-                <fieldset>
-                    <legend>Your details</legend>
 
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="why-shop">
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <h2>Why Shop With Us?</h2>
 
-                    <label for="subject">Subject</label>
-                    <select id="subject" name="subject">
-                        <option value="product-question">Product question</option>
-                        <option value="order-status">Order status</option>
-                        <option value="wholesale">Wholesale enquiry</option>
-                        <option value="other">Something else</option>
-                    </select>
+                <p>✦ Official K-pop albums</p>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <p>✦ Authentic photocards</p>
 
-                    <button type="submit">Send message</button>
-                </fieldset>
-            </form>
-        </section>
+                <p>✦ Carefully packed orders</p>
+
+                <p>✦ Made for K-pop collectors</p>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ========================================
+             MAIN
+             ======================================== -->
+
+        <main>
+
+            <h2>Contact Us</h2>
+
+
+            <div class="contact-container">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <section class="contact">
+
+                    <h3>Get In Touch</h3>
+
+                    <p>
+                        Have questions about our albums or photocards?
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            📧 Email:
+                            <a href="mailto:seaheshop@gmail.com">
+                                seaheshop@gmail.com
+                            </a>
+                        </li>
+
+                        <li>
+                            📞 Contact no.
+                            <a href="tel:+63933428791">
+                                +63 9342 8791
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- CONTACT FORM -->
+
+                <section class="form">
+
+                    <form>
+
+                        <fieldset>
+
+                            <legend>Your details</legend>
+
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                            >
+
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                            >
+
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <select
+                                id="subject"
+                                name="subject"
+                            >
+
+                                <option value="product-question">
+                                    Product question
+                                </option>
+
+                                <option value="order-status">
+                                    Order status
+                                </option>
+
+                                <option value="wholesale">
+                                    Wholesale enquiry
+                                </option>
+
+                                <option value="other">
+                                    Something else
+                                </option>
+
+                            </select>
+
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                required
+                            ></textarea>
+
+
+                            <button type="submit">
+                                Send message
+                            </button>
+
+                        </fieldset>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+        </main>
+
+
+        <!-- ========================================
+             FOOTER
+             ======================================== -->
+
+        <footer>
+
+            <p>
+                &copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.
+            </p>
+
+        </footer>
+
 
     </div>
-</main>
-
-    <footer>
-        <p>&copy; 2026 SEAHÉ⭑.ᐟ. All rights reserved.</p>
-    </footer>
 
 </body>
 </html>
+```
